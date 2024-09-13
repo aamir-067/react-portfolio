@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Links = () => {
     const links = [
         {
@@ -24,7 +22,7 @@ const Links = () => {
         }
     ]
     return (
-        <div className='flex flex-wrap gap-x-8 gap-y-4'>
+        <div className='flex flex-wrap gap-x-8 gap-y-4 pb-10'>
             {
                 links.map(link => (
 
