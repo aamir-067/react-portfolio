@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lazy-image {
+	transition: filter 0.5s ease, opacity 0.5s ease; /* smooth transition */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.lazy-image.loading {
+	filter: blur(20px); /* Apply blur effect */
+	opacity: 0.5; /* Slightly reduce opacity */
+}
+
+.lazy-image.loaded {
+	filter: blur(0); /* Remove blur when loaded */
+	opacity: 1; /* Restore full opacity */
 }
