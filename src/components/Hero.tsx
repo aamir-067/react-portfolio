@@ -10,7 +10,7 @@ const Hero = () => {
 
             <div className="w-full max-w-[200px] bg-black dark:bg-slate-300 rounded-xl h-[200px]">
                 <img
-                    alt="profile image of Muhammad Aamir Khan, a software engineering student. Instead of just relying on my CS degree, I focus on learning practical skills. So far, I've picked up blockchain development, full-stack web development, and mobile app development with Expo React Native."
+                    alt="profile of Muhammad Aamir Khan, a software engineering student. Instead of just relying on my CS degree, I focus on learning practical skills. So far, I've picked up blockchain development, full-stack web development, and mobile app development with Expo React Native."
                     className={`w-full lazy-image  h-full rounded-xl p-0.5 object-cover overflow-hidden ${loaded ? "loaded" : "loading"}`}
                     src={
                         isDark ? "./profile_dark.jpg" : "./profile_light.jpg"
