@@ -26,9 +26,12 @@ const Hero = () => {
                 <div className='text-black dark:text-gray-300'>
                     <h2 className='text-3xl md:text-4xl mt-4 font-bolder font-victor capitalize'>M. Aamir Khan</h2>
                     <p className='text-sm leading-6 font-victor my-5'>
-                        Hi, I'm Muhammad Aamir Khan, a software engineering student. Instead of just relying on my CS degree, I focus on learning practical skills. So far, I've picked up blockchain development, full-stack web development, and mobile app development with Expo React Native.<br /> <br />
+                        Hi, I'm Aamir, a software engineering student. Instead of just relying on my degree, I focused on learning practical skills. I've picked up blockchain, web, and mobile app development with React Native.<br /> <br />
 
-                        I bet you're curious about my work experience! Right now, I'm interning as a full-stack web developer at Devsort Services. Some of the projects I've worked on include Aamfeer Kitchen, Morph AI, and a Staking and Token Pre-sale DApp. But those aren’t the only projects—if you want to know more about me, feel free to check out my LinkedIn. And if you’re really interested in seeing my code (it’s a bit messy!), head over to my GitHub. <br /> <br />
+                        I bet you're curious about my work experience! I work as a full-stack web developer at Devsort Services. Some of the projects I've worked on include <a target={"_blank"} href={"https://play.google.com/store/apps/details?id=com.aamir067.morphai"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-white'>Morph AI</a>,&nbsp;
+                        <a target={"_blank"} href={"racipe-project-front.vercel.app/"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-white'>Aamfeer Kitchen</a>,&nbsp;
+                        <a target={"_blank"} href={"tixbuddy.netlify.app/"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-white'>TixBuddy</a>&nbsp;and a&nbsp;
+                        <a target={"_blank"} href={"liquidtron.netlify.app/"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-white'>Token Pre-sale DApp</a>. But those aren’t the only projects—if you want to know more about me, feel free to check out my LinkedIn. And if you’re really interested in seeing my code (it’s a bit messy!), head over to my GitHub. <br /> <br />
 
                         If you’d like to reach out or hire me, just drop me a message on WhatsApp or Instagram!
                     </p>

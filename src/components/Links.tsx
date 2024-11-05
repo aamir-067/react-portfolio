@@ -18,14 +18,14 @@ const Links = () => {
         },
         {
             name: "don't click",
-            url: "https://farvelo.com"
+            url: "https://drive.google.com/file/d/1v_eu1UWxvONh5yU8bqRLkmZDs-baNs6Z/view?usp=sharing"
         }
     ]
     return (
         <div className='flex flex-wrap gap-x-8 gap-y-4 pb-10'>
             {
                 links.map(link => (
-                    <a key={link.url} target={"_blank"} href={link.url} rel="noreferrer" className='p-0 underline font-victor capitalize text-blue-400 visited:text-violet-400'>{link.name}</a>
+                    <a key={link.url} download={link.name === "don't click"} target={"_blank"} href={link.url} rel="noreferrer" className='p-0 underline font-victor capitalize text-blue-400 visited:text-violet-400'>{link.name}</a>
                 ))
             }
         </div>
