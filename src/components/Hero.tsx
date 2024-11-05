@@ -12,10 +12,6 @@ const Hero = () => {
                 <img
                     alt="profile of Muhammad Aamir Khan, a software engineering student. Instead of just relying on my CS degree, I focus on learning practical skills. So far, I've picked up blockchain development, full-stack web development, and mobile app development with Expo React Native."
                     className={`w-full  h-full rounded-xl p-0.5 object-cover overflow-hidden ${loaded ? "loaded" : "loading"}`}
-                    // src={
-                    //     isDark ? "https://res.cloudinary.com/dcihcunyx/image/upload/f_auto,q_auto/r9elwmjdg88rba34iufp" :
-                    //         "https://res.cloudinary.com/dcihcunyx/image/upload/f_auto,q_auto/slydn2rpfknnl43czyrf"
-                    // }
                     src={
                         isDark ? "./profile_dark.webp" :
                             "./profile_white.webp"

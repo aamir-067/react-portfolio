@@ -25,7 +25,6 @@ const Links = () => {
         <div className='flex flex-wrap gap-x-8 gap-y-4 pb-10'>
             {
                 links.map(link => (
-
                     <a key={link.url} target={"_blank"} href={link.url} className='p-0 underline font-victor capitalize text-blue-400 visited:text-violet-400'>{link.name}</a>
                 ))
             }
