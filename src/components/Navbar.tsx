@@ -29,7 +29,7 @@ const NavBar = ({ isDark, setIsDark }: { isDark: boolean; setIsDark: React.Dispa
             root.classList.remove("bg-slate-950");
             setIsDark(false);
         }
-    }, []);
+    }, [isDark, setIsDark]);
 
 
     return (
