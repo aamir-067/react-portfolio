@@ -27,7 +27,7 @@ const Hero = () => {
                     <h2 className='text-3xl md:text-4xl mt-4 font-bolder font-victor capitalize'>M. Aamir Khan</h2>
                     <p className='text-sm leading-6 font-victor my-5'>
                         Hi, I'm Aamir, a software engineering student. Instead of just relying on my degree, I focused on learning practical skills. I've picked up blockchain, web, and mobile app development with React Native.<br /> <br />
-                        I bet you're curious about my work experience! I work as a full-stack web developer at Devsort Services. Some of the projects I've worked on include&nbsp;
+                        I bet you're curious about my work experience! I work as a full-stack web developer at Metasense Technologies. Some of my personal projects I've worked on include&nbsp;
                         <a target={"_blank"} href={"https://play.google.com/store/apps/details?id=com.aamir067.morphai"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-black visited:dark:text-gray-300'>Morph AI</a>,&nbsp;
                         <a target={"_blank"} href={"https://racipe-project-front.vercel.app/"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-black visited:dark:text-gray-300'>Aamfeer Kitchen</a>,&nbsp;
                         <a target={"_blank"} href={"https://tixbuddy.netlify.app/"} rel="noreferrer" className='p-0 underline font-victor capitalize text-black dark:text-gray-300 visited:text-black visited:dark:text-gray-300'>TixBuddy</a>&nbsp;and a&nbsp;
