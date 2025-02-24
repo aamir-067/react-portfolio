@@ -14,7 +14,7 @@ const Links = () => {
         },
         {
             name: "instagram",
-            url: "https://www.instagram.com/iaamir067"
+            url: "https://www.instagram.com/aamir.067"
         },
         {
             name: "don't click",
