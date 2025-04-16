@@ -27,7 +27,7 @@ const Links = () => {
           target="_blank"
           rel="noreferrer"
           href={link.url}
-          className="underline font-victor capitalize text-blue-400 visited:text-violet-400"
+          className="underline font-victor capitalize text-violet-500 visited:text-violet-500 dark:text-violet-400 dark:visited:text-violet-400"
         >
           {link.name}
         </a>
