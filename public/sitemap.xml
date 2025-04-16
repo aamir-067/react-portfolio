@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://portfolio-of-aamir.vercel.app/</loc>
+    <lastmod>2025-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- GitHub -->
+  <url>
+    <loc>https://github.com/aamir-067</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- LinkedIn -->
+  <url>
+    <loc>https://www.linkedin.com/in/i-aamir-khan</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Morph AI App -->
+  <url>
+    <loc>https://play.google.com/store/apps/details?id=com.aamir067.morphai</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Personal Projects -->
+  <url>
+    <loc>https://racipe-project-front.vercel.app/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tixbuddy.netlify.app/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://liquidtron.netlify.app/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
