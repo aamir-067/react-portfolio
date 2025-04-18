@@ -6,7 +6,7 @@ const Links = () => {
     { name: "instagram", url: "https://www.instagram.com/iaamir067" },
     {
       name: "download resume",
-      url: "https://drive.google.com/file/d/1v_eu1UWxvONh5yU8bqRLkmZDs-baNs6Z/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1wDNR9IxWOmGQVIeN0u5_j1xC3gTpLIix/view?usp=sharing",
     },
   ];
 
