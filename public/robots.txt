@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-of-aamir.vercel.app/sitemap.xml
+Sitemap: https://aamir.zoviotech.com/sitemap.xml
 

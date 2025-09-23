@@ -1,15 +1,12 @@
-const Links = () => {
-  const links = [
-    { name: "github", url: "https://github.com/aamir-067" },
-    { name: "linkedIn", url: "https://www.linkedin.com/in/i-aamir-khan" },
-    { name: "what'sApp", url: "https://wa.me/923441259408" },
-    { name: "instagram", url: "https://www.instagram.com/iaamir067" },
-    {
-      name: "download resume",
-      url: "https://drive.google.com/file/d/1wDNR9IxWOmGQVIeN0u5_j1xC3gTpLIix/view?usp=sharing",
-    },
-  ];
+const links = [
+  { name: "email", url: "mailto:aamirkhan@engineer.com" },
+  { name: "github", url: "https://github.com/aamir-067" },
+  { name: "linkedIn", url: "https://www.linkedin.com/in/i-aamir-khan" },
+  { name: "what'sApp", url: "https://wa.me/923441259408" },
+  { name: "instagram", url: "https://www.instagram.com/iaamir067" },
+];
 
+const Links = () => {
   return (
     <div className="flex items-center flex-wrap gap-x-8 gap-y-4 pb-10">
       <a
@@ -23,7 +20,6 @@ const Links = () => {
       {links.map((link) => (
         <a
           key={link.url}
-          download={link.name === "download resume"}
           target="_blank"
           rel="noreferrer"
           href={link.url}
@@ -35,6 +31,4 @@ const Links = () => {
     </div>
   );
 };
-
 export default Links;
-
