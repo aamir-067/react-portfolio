@@ -1,0 +1,30 @@
+well well well, this is the second year I am writing this yearly note where I write my current skill and mu future goals.
+long story short I learned a lot this year. and based on previous year plan I achieved 4/5. the only thing remaining is ML and django which I will not learn for now.
+So, right now I completed a 5 months internship and now I am working as a full stack web developer at metasense. right now I am in peshawar and its my first month at the job.
+My skills, all from the previous year plus
+
+=== backend =====
+ - prisma, next, sql, typescript, redis, postgres , jwt, clerk, appwrite, firebase
+
+===== mobile ====
+- react native, swiftUI (but its a basic level.)
+
+==== davOps =====
+aws, docker, git, github, play store app deployment.
+
+and I didn't mentioned about the blockchain because I am not doing that. btw I do know the working of it and also I learned a defi a little about and I am not working
+in blockchain anymore.
+
+===== My achievements. ========
+1. I got a full time job along with 5 months internship.
+2. I learned react native in a great details and published an app to the play store.
+3. I am learning about the IOS development and also I am working on app in swiftUI.
+4. currently I am building my FYP project which is in react native and the backend will be in node. and I am managing the most part of it and learned more stuff in that.
+
+======= Next Year Goals ============
+1. learn swiftUI in great details.
+2. Learn rust along with some projects.
+3. learn go and make at least 2 backends in that.
+4. create one database project. (rust project)
+5. make one project in js, rust, and in go.
+6. create a http server from self. (go, js , rust project).

@@ -1,52 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home Page -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aamir.zoviotech.com/</loc>
-    <lastmod>2025-09-23</lastmod> <!-- TODO: Update with the last modification date -->
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- GitHub -->
   <url>
-    <loc>https://github.com/aamir-067</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://aamir.zoviotech.com/blogs</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- LinkedIn -->
   <url>
-    <loc>https://www.linkedin.com/in/i-aamir-khan</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://aamir.zoviotech.com/blog/agentic-ai</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Morph AI App -->
   <url>
-    <loc>https://play.google.com/store/apps/details?id=com.aamir067.morphai</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://aamir.zoviotech.com/blog/rag-vector-search</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Personal Projects -->
   <url>
-    <loc>https://racipe-project-front.vercel.app/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://aamir.zoviotech.com/blog/ai-automation-2026</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
-  <url>
-    <loc>https://tixbuddy.netlify.app/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://liquidtron.netlify.app/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>

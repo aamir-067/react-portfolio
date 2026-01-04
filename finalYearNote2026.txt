@@ -1,0 +1,23 @@
+Well, this is my 3rd year in a row of writing my final year goals and now I'll see in the next year whether I complete my goals or not. So, this year I didn't followed the plan using 12 week year because in the job at Metasense, I got too tired that I don't even have time to even follow the plan or work on my goals or even go to gym. in 2025 start I wrote that I will work to learn the things. but those things were scattered and didn't match with each other but this not the reason I didn't work on but the real reason was that I was overloaded and unfocused. in the start of 2025 I mentioned that I will learn swiftUI in great details,  Learn rust, Go, and create projects of own database and http server from myself which was good. but instead of that I honestly worked and learned things form 2024 goals like DavOps and right now I am working on Agentic AI adn RAG pipelines Automation . which I will learn till the end. 
+The issue with me was that I stopped things in the middle, like I started learning swiftUI and then stopped after like one month. in this year I also started working on rust and go lang but then stopped work on it after some time, not because of hard learning curve but because I was misaligned.  but in this year 2026, inshallah I will work towards only one goal rather than working on multiple things.
+I also started my company zoviotech.com which right now has 0 customers and 0 products but in this year end the part of this plan is also to get one long term client or 2 clients and one validated idea. 
+
+But honestly speaking, I learned and gained very good knowledge in the last year along with my job. and most important which is super good is my skills to talk with peoples and also by not learning a language or a specific thing like web developer or just a crud developer I build real production apps and deployed and still I am managing it which is super good thing. along with that, in my current job I learned that how to do a research and how and where to find a solution to errors and issues which are not solvable by either AI and directly by brainstorming. and most important thing is that I learned that how to read docs and work with it.
+
+==== Skills =====
+I am not going in details but I can say that I learned many things as compare to the prev year. like I scaled and deployed NodeJs app with websockets, redis workers , RudderStack events, db scaling and hosting AWS. also now I am managing the cloud function of LQDCNVS projects in google cloud along with that I learned the how to build shopify apps and researched about it and now I am working on it. and metasense CEO told me that try work on new things which is not too saturated and you will get long term clients there and I am now working on that. in which I already studied and learned about LangChain, RAG, vector databases and embeddings. even though I don't have a project yet because I am working on on project now. the AI DevHelper.
+
+======= My achievements. ========== 
+1. I got promoted 2 times this year, one time i get 100%+ increment and one regular increment. and now my salary is 100k+
+2. Learned AWS in details and now I am super comfortable working in aws.
+3. started my own company zoviotech
+
+==== Next Year Goals =======
+Goal 1: Reduce salary dependency by Build your own income stream, Target: 30–50% of salary replaced
+Goal 2 — Build Zoviotech foundation, One clear niche, One repeatable service, One product idea incubated quietly
+Goal 3:  Become “hard to replace” in AI era by learning System design, Automation, Business workflows, Architecture + AI tools
+Goal 4:  Improve weak Communication, English (practical, not academic), Sales basics
+Goal 5: Join Gym, fix Sleep cycle, reduce mobile screen time. (max 3hrs daily)
+
+At the End of the year, I will judge myself based on myself consistency, income and my company success rather then the things I learned.
+

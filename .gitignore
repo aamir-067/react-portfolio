@@ -13,6 +13,7 @@ finalYearNote.txt
 /build
 
 # misc
+.next
 .DS_Store
 .env.local
 .env.development.local

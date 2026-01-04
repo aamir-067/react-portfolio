@@ -7,10 +7,9 @@ export interface BlogEntry {
 }
 
 export const blogIndex: BlogEntry[] = [
-	// { slug: "getting-started-react", file: "/blogs/getting-started-react.md" },
-	// { slug: "typescript-tips", file: "/blogs/typescript-tips.md" },
-	// { slug: "tailwind-setup", file: "/blogs/tailwind-setup.md" },
-	// { slug: "tailwind-setup-two", file: "/blogs/tailwind-setup-two.md" },
+	{ slug: "agentic-ai", file: "/blogs/agentic-ai.md" },
+	{ slug: "rag-vector-search", file: "/blogs/rag-vector-search.md" },
+	{ slug: "ai-automation-2026", file: "/blogs/ai-automation-2026.md" },
 ];
 
 export default blogIndex;
