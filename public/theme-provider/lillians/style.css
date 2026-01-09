@@ -1,3 +1,7 @@
+/* Display a red color text on whole body in the center. */
+
+
+/*
 body::after {
     content: "Service Suspended: Pending Payment. Contact Developer.";
     position: fixed;
@@ -10,3 +14,5 @@ body::after {
     font-size: 2rem;
     color: red;
 }
+
+*/
