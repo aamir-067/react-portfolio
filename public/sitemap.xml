@@ -2,30 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aamir.zoviotech.com/</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aamir.zoviotech.com/blogs</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://aamir.zoviotech.com/blogs/</loc>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aamir.zoviotech.com/blog/agentic-ai</loc>
+    <loc>https://aamir.zoviotech.com/blog/my-tech-journey/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aamir.zoviotech.com/blog/agentic-ai/</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aamir.zoviotech.com/blog/rag-vector-search</loc>
+    <loc>https://aamir.zoviotech.com/blog/rag-vector-search/</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aamir.zoviotech.com/blog/ai-automation-2026</loc>
+    <loc>https://aamir.zoviotech.com/blog/ai-automation-2026/</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

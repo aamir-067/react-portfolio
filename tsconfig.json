@@ -22,6 +22,10 @@
     "skipLibCheck": true,
     "strict": true,
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"

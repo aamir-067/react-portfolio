@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* Static palette (physical artifacts: veils, frames, fallbacks) */
+	--paper: #f2efe8;
+	--paper-soft: #e9e5da;
+	--ink: #15130e;
+	--accent: #ff4d00;
+
+	/* Theme channels. Paper by default; sections opt into ink via .theme-ink.
+	   Static scoping only, never mutated at runtime. */
+	--bg-rgb: 242 239 232;
+	--fg-rgb: 21 19 14;
+}
+
+@layer base {
+	html {
+		background-color: rgb(var(--bg-rgb));
+		color: rgb(var(--fg-rgb));
+		scrollbar-width: thin;
+		scrollbar-color: rgba(21, 19, 14, 0.3) transparent;
+	}
+
+	.theme-ink {
+		--bg-rgb: 21 19 14;
+		--fg-rgb: 242 239 232;
+		/* Re-declare color so descendants without explicit text classes
+		   inherit the scoped value, not body's computed dark color. */
+		color: rgb(var(--fg-rgb));
+	}
+
+	body {
+		font-family: var(--font-sans), system-ui, sans-serif;
+		background-color: rgb(var(--bg-rgb));
+		color: rgb(var(--fg-rgb));
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		overflow-x: clip;
+	}
+
+	::selection {
+		background: var(--accent);
+		color: var(--paper);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: 1px;
+	}
+
+	@media (pointer: fine) {
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgb(var(--fg-rgb) / 0.25);
+			border: 3px solid rgb(var(--bg-rgb));
+			border-radius: 6px;
+		}
+	}
+
+	html.lenis,
+	html.lenis body {
+		height: auto;
+	}
+
+	.lenis.lenis-smooth {
+		scroll-behavior: auto !important;
+	}
+
+	mark {
+		background: rgba(255, 77, 0, 0.18);
+		color: rgb(var(--fg-rgb));
+		padding: 0 0.2em;
+	}
+}
+
+@layer components {
+	.skip-link {
+		position: fixed;
+		top: 12px;
+		left: 12px;
+		z-index: 130;
+		transform: translateY(-300%);
+		background: var(--ink);
+		color: var(--paper);
+		padding: 10px 18px;
+		font-family: var(--font-mono);
+		font-size: 12px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		transition: transform 0.2s ease;
+	}
+
+	.skip-link:focus-visible {
+		transform: translateY(0);
+	}
+
+	.mono-label {
+		font-family: var(--font-mono), ui-monospace, monospace;
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+	}
+
+	.split-line {
+		will-change: transform;
+	}
+
+	/* Dual-layer specimen glyphs: roman base with an italic accent twin
+	   crossfaded by the type wave (src/lib/motion/typeWave.ts) */
+	.tw-char {
+		position: relative;
+		display: inline-block;
+		will-change: transform;
+	}
+
+	.tw-char .tw-roman {
+		display: inline-block;
+	}
+
+	.tw-char .tw-italic {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		font-style: italic;
+		color: var(--accent);
+	}
+
+	.tw-char.tw-invert .tw-italic {
+		font-style: normal;
+		color: rgb(var(--fg-rgb));
+	}
+
+	.stamp-rotor {
+		animation: stamp-spin 26s linear infinite;
+		transform-origin: 50% 50%;
+	}
+
+	@keyframes stamp-spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.marquee-track {
+		animation: marquee 30s linear infinite;
+	}
+
+	@keyframes marquee {
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	/* Boot veil: visible only when the head script flags a fresh session */
+	.boot-veil {
+		display: none;
+	}
+
+	html[data-boot] .boot-veil {
+		display: flex;
+	}
+
+	/* Work section chapter rail */
+	.rail-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: rgb(var(--fg-rgb) / 0.35);
+		transition: color 0.35s ease;
+	}
+
+	.rail-link::before {
+		content: "";
+		display: block;
+		width: 14px;
+		height: 1px;
+		background: var(--accent);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.35s ease;
+	}
+
+	.rail-link.rail-active {
+		color: rgb(var(--fg-rgb));
+	}
+
+	.rail-link.rail-active::before {
+		transform: scaleX(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.marquee-track {
+		animation: none;
+	}
+
+	.stamp-rotor {
+		animation: none;
+	}
+
+	html[data-boot] .boot-veil {
+		display: none !important;
+	}
+}
+
+@media (pointer: fine) {
+	html[data-custom-cursor] body,
+	html[data-custom-cursor] a,
+	html[data-custom-cursor] button {
+		cursor: none;
+	}
+}
+
+/* Minimal highlight.js theme tuned to the site palette */
+.hljs {
+	color: #e8e4d8;
+}
+.hljs-keyword,
+.hljs-literal,
+.hljs-selector-tag,
+.hljs-name {
+	color: #ff7a40;
+}
+.hljs-string,
+.hljs-attr,
+.hljs-symbol,
+.hljs-title {
+	color: #d8c9a3;
+}
+.hljs-comment,
+.hljs-quote {
+	color: rgba(232, 228, 216, 0.45);
+	font-style: italic;
+}
+.hljs-number,
+.hljs-built_in,
+.hljs-type {
+	color: #9fb8a8;
+}

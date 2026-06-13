@@ -1,13 +1,18 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function NotFound() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
-      <h2 className="text-4xl font-bold mb-4">404 - Page Not Found</h2>
-      <p className="text-gray-600 dark:text-gray-400 mb-8">Could not find requested resource</p>
-      <Link href="/" className="text-violet-500 hover:text-violet-600 underline">
-        Return Home
-      </Link>
-    </div>
-  );
+	return (
+		<section className="flex min-h-screen flex-col items-start justify-center px-5 md:px-10">
+			<p className="mono-label text-fg/60">404 / No match in the index</p>
+			<h1 className="mt-6 font-serif text-[clamp(3rem,10vw,8rem)] leading-[0.95]">
+				Nothing <em className="text-accent">retrieved</em> here.
+			</h1>
+			<Link
+				href="/"
+				className="mono-label mt-12 inline-flex items-center border border-line px-6 py-4 transition-colors duration-300 hover:border-accent hover:text-accent"
+			>
+				Back to the signal
+			</Link>
+		</section>
+	);
 }
