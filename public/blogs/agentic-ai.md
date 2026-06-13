@@ -2,7 +2,7 @@
 title: The Rise of Agentic AI - Building Truly Autonomous Systems
 author: Muhammad Aamir Khan
 date: 2026-01-04
-coverImage: /blogs/agentic-ai-cover.jpg
+coverImage: /blogs/agentic-ai-cover.webp
 ---
 
 # The Rise of Agentic AI: Building Truly Autonomous Systems

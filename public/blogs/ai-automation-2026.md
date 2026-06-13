@@ -2,7 +2,7 @@
 title: AI Automation in 2026 - From Hype to Real Business Value
 author: Muhammad Aamir Khan
 date: 2025-12-28
-coverImage: /blogs/ai-automation-cover.jpg
+coverImage: /blogs/ai-automation-cover.webp
 ---
 
 # AI Automation in 2026: From Hype to Real Business Value

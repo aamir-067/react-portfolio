@@ -2,7 +2,7 @@
 title: RAG and Vector Search - The Foundation of AI Knowledge Systems
 author: Muhammad Aamir Khan
 date: 2026-01-02
-coverImage: /blogs/rag-vector-search-cover.jpg
+coverImage: /blogs/rag-vector-search-cover.webp
 ---
 
 # RAG and Vector Search: The Foundation of AI Knowledge Systems

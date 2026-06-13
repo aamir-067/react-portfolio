@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
-  <rect width="1200" height="1500" fill="#e9e5da"/>
-  <path d="M0 0L1200 1500 M1200 0L0 1500" stroke="rgba(21,19,14,0.1)" stroke-width="2"/>
-  <rect x="1.5" y="1.5" width="1197" height="1497" fill="none" stroke="rgba(21,19,14,0.28)" stroke-width="3"/>
-  <circle cx="600" cy="720" r="7" fill="#ff4d00"/>
-  <text x="600" y="790" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" letter-spacing="4" fill="#15130e">ABOUT / PORTRAIT</text>
-  <text x="600" y="842" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="3" fill="rgba(21,19,14,0.55)">PLACEHOLDER / 1200 x 1500</text>
-</svg>

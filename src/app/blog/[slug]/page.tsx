@@ -13,6 +13,21 @@ export async function generateStaticParams() {
 	return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
+const toPlainText = (markdown: string) =>
+	markdown
+		.replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+		.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+		.replace(/[#*`>_~]/g, "")
+		.replace(/\s+/g, " ")
+		.trim();
+
+const metaDescription = (markdown: string) => {
+	const plain = toPlainText(markdown);
+	return plain.length > 155
+		? `${plain.slice(0, 155).replace(/\s+\S*$/, "")}...`
+		: plain;
+};
+
 export async function generateMetadata({
 	params,
 }: {
@@ -21,7 +36,7 @@ export async function generateMetadata({
 	const { slug } = await params;
 	const blog = await loadBlogBySlug(slug);
 	if (!blog) return { title: "Not Found" };
-	const description = blog.content.substring(0, 160).replace(/[#*`]/g, "");
+	const description = metaDescription(blog.content);
 	return {
 		title: blog.title,
 		description,
@@ -64,19 +79,27 @@ export default async function BlogDetailPage({
 		"<mark>$1</mark>",
 	);
 	const dateLabel = blog.date ? dateFormatter.format(new Date(blog.date)) : "";
-	const readingTime = `${Math.ceil(
-		blog.content.split(/\s+/).length / 200,
-	)} min read`;
+	const wordCount = blog.content.split(/\s+/).filter(Boolean).length;
+	const readingTime = `${Math.ceil(wordCount / 200)} min read`;
+	const description = metaDescription(blog.content);
 
 	const jsonLdArticle = {
 		"@context": "https://schema.org",
-		"@type": "Article",
+		"@type": "BlogPosting",
+		"@id": `${site.url}/blog/${slug}/#article`,
 		headline: blog.title,
+		description,
 		datePublished: blog.date || undefined,
+		dateModified: blog.date || undefined,
 		image: blog.coverImage ? [`${site.url}${blog.coverImage}`] : undefined,
 		author: { "@id": `${site.url}/#person` },
 		publisher: { "@id": `${site.url}/#person` },
-		mainEntityOfPage: `${site.url}/blog/${slug}/`,
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": `${site.url}/blog/${slug}/`,
+		},
+		inLanguage: "en",
+		wordCount,
 	};
 
 	const jsonLdBreadcrumbs = {
@@ -129,9 +152,12 @@ export default async function BlogDetailPage({
 					<div className="mt-10 overflow-hidden border border-line">
 						<img
 							src={blog.coverImage}
-							alt=""
+							alt={blog.title}
 							width={1600}
 							height={900}
+							fetchPriority="high"
+							decoding="async"
+							sizes="(max-width: 768px) 100vw, 768px"
 							className="w-full object-cover"
 						/>
 					</div>

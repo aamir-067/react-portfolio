@@ -48,6 +48,7 @@ export const metadata: Metadata = {
 	applicationName: site.shortName,
 	authors: [{ name: site.name, url: site.url }],
 	creator: site.name,
+	publisher: site.name,
 	keywords: [
 		"Aamir Khan",
 		"Muhammad Aamir Khan",
@@ -68,9 +69,13 @@ export const metadata: Metadata = {
 		description: site.description,
 		url: site.url,
 		siteName: site.shortName,
-		// TODO: swap to a designed 1200x630 OG image (see IMAGES.md)
 		images: [
-			{ url: "/profile_white.png", width: 1200, height: 630, alt: site.name },
+			{
+				url: "/og.png",
+				width: 1200,
+				height: 630,
+				alt: `${site.name}, ${site.role}`,
+			},
 		],
 		locale: "en_US",
 		type: "website",
@@ -79,7 +84,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: pageTitle,
 		description: site.description,
-		images: ["/profile_white.png"],
+		images: ["/og.png"],
 		creator: "@A_a_M_i_R_",
 	},
 	robots: {
@@ -97,6 +102,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
 	themeColor: "#f2efe8",
+	colorScheme: "light",
 };
 
 const jsonLdPerson = {
@@ -107,11 +113,17 @@ const jsonLdPerson = {
 	jobTitle: "Sr. Fullstack AI Engineer",
 	description: site.description,
 	url: site.url,
+	image: `${site.url}/profile.webp`,
 	email: `mailto:${site.email}`,
 	address: {
 		"@type": "PostalAddress",
 		addressLocality: "Peshawar",
 		addressCountry: "PK",
+	},
+	worksFor: { "@type": "Organization", name: "Metasense Technologies" },
+	alumniOf: {
+		"@type": "CollegeOrUniversity",
+		name: "UST Bannu, KPK, Pakistan",
 	},
 	sameAs: [site.linkedin, site.github],
 	knowsAbout: [
@@ -133,6 +145,18 @@ const jsonLdWebsite = {
 	name: `${site.name}, Sr. Fullstack AI Engineer`,
 	description: site.description,
 	publisher: { "@id": `${site.url}/#person` },
+};
+
+const jsonLdProfilePage = {
+	"@context": "https://schema.org",
+	"@type": "ProfilePage",
+	"@id": `${site.url}/#webpage`,
+	url: site.url,
+	name: pageTitle,
+	isPartOf: { "@id": `${site.url}/#website` },
+	about: { "@id": `${site.url}/#person` },
+	mainEntity: { "@id": `${site.url}/#person` },
+	inLanguage: "en",
 };
 
 // Flags a fresh session before first paint so the boot veil can render
@@ -158,6 +182,12 @@ export default function RootLayout({
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
+				/>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(jsonLdProfilePage),
+					}}
 				/>
 			</head>
 			<body>

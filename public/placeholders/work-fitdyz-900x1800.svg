@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1800" viewBox="0 0 900 1800">
-  <rect width="900" height="1800" fill="#e9e5da"/>
-  <path d="M0 0L900 1800 M900 0L0 1800" stroke="rgba(21,19,14,0.1)" stroke-width="2"/>
-  <rect x="1.5" y="1.5" width="897" height="1797" fill="none" stroke="rgba(21,19,14,0.28)" stroke-width="3"/>
-  <circle cx="450" cy="870" r="7" fill="#ff4d00"/>
-  <text x="450" y="940" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" letter-spacing="4" fill="#15130e">WORK / FITDYZ AI</text>
-  <text x="450" y="992" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" letter-spacing="3" fill="rgba(21,19,14,0.55)">PLACEHOLDER / 900 x 1800</text>
-</svg>

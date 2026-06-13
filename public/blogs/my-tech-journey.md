@@ -1,8 +1,8 @@
 ---
 title: My Tech Journey – From Projects to Purpose
 author: Muhammad Aamir Khan
-date: 2026-1-23
-coverImage: /blogs/my-tech-journey-cover.png
+date: 2026-01-23
+coverImage: /blogs/my-tech-journey-cover.webp
 ---
 
 # From Projects to Purpose: My Journey in Tech
