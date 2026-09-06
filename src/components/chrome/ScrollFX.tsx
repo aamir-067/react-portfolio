@@ -5,8 +5,7 @@ import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger, registerGsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/device";
 
-// Page-level scroll instruments: reading-progress hairline and a subtle
-// velocity shear on display headings ([data-shear]).
+// Reading-progress hairline plus a subtle velocity shear on display headings.
 export default function ScrollFX() {
 	const barRef = useRef<HTMLSpanElement>(null);
 	const pathname = usePathname();
@@ -36,11 +35,7 @@ export default function ScrollFX() {
 					start: 0,
 					end: "max",
 					onUpdate: (self) => {
-						const target = gsap.utils.clamp(
-							-1.4,
-							1.4,
-							self.getVelocity() / -700,
-						);
+						const target = gsap.utils.clamp(-1.2, 1.2, self.getVelocity() / -800);
 						if (Math.abs(target) > Math.abs(proxy.skew)) {
 							proxy.skew = target;
 							gsap.to(proxy, {
@@ -63,7 +58,7 @@ export default function ScrollFX() {
 		<span
 			ref={barRef}
 			aria-hidden
-			className="fixed left-0 top-0 z-[85] h-[2px] w-full origin-left scale-x-0 bg-accent"
+			className="fixed left-0 top-0 z-[96] h-px w-full origin-left scale-x-0 bg-fg"
 		/>
 	);
 }

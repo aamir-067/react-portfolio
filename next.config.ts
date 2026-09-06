@@ -29,7 +29,9 @@ const nextConfig = {
 	images: {
 		unoptimized: true,
 	},
-	reactStrictMode: true,
+	// Off: React 19 StrictMode double-mounts <Canvas>, and R3F force-loses the
+	// shared WebGL context on the simulated unmount. Dev-only, no prod impact.
+	reactStrictMode: false,
 };
 
 export default nextConfig;

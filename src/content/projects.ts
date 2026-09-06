@@ -1,14 +1,32 @@
 import type { ImageKey } from "./images";
 
-export interface ProjectMetric {
-	value: string;
-	label: string;
+export interface Counter {
+	from: number;
+	to: number;
+	prefix?: string;
+	suffix?: string;
+	decimals?: number;
+	compact?: boolean;
 }
+
+export interface ProjectMetric {
+	display: string;
+	label: string;
+	counter?: Counter;
+}
+
+export interface TraceNote {
+	status: "verified" | "self-reported";
+	note: string;
+}
+
+export type ProjectLead = "metric" | "image" | "device";
 
 export interface Project {
 	index: string;
 	slug: string;
 	title: string;
+	category: string;
 	tagline: string;
 	role: string;
 	year: string;
@@ -17,9 +35,10 @@ export interface Project {
 	approach: string;
 	outcome: string;
 	metrics: ProjectMetric[];
+	lead: ProjectLead;
+	trace: TraceNote;
 	link?: { href: string; label: string };
 	image: ImageKey;
-	orientation: "landscape" | "portrait";
 }
 
 export const projects: Project[] = [
@@ -27,6 +46,7 @@ export const projects: Project[] = [
 		index: "01",
 		slug: "cleartraced",
 		title: "Cleartraced",
+		category: "AI data platform",
 		tagline: "AI ESG and financial data extraction",
 		role: "AI Engineer",
 		year: "2026",
@@ -45,17 +65,29 @@ export const projects: Project[] = [
 		outcome:
 			"Weeks of manual analyst work now run as an agent pipeline with human verification at the end, and every figure stays traceable to its source. In production with clients including Millistream and Global Child Forum.",
 		metrics: [
-			{ value: "300+", label: "Fields extracted per company" },
-			{ value: "100%", label: "Figures traceable to source" },
+			{
+				display: "300+",
+				label: "Fields extracted per company",
+				counter: { from: 0, to: 300, suffix: "+" },
+			},
+			{
+				display: "100%",
+				label: "Figures traceable to source",
+				counter: { from: 0, to: 100, suffix: "%" },
+			},
 		],
-		// TODO: add live URL for Cleartraced if one should be public
+		lead: "metric",
+		trace: {
+			status: "verified",
+			note: "Production system built at Metasense Technologies, 2025 to 2026. Client names as stated in the case study.",
+		},
 		image: "workCleartraced",
-		orientation: "landscape",
 	},
 	{
 		index: "02",
 		slug: "lookatlas",
 		title: "LookAtlas",
+		category: "Generative studio",
 		tagline: "AI virtual product studio",
 		role: "Fullstack Engineer",
 		year: "2026",
@@ -67,17 +99,22 @@ export const projects: Project[] = [
 		outcome:
 			"A costly, slow shoot becomes a few minutes of work. Brands keep one consistent look across the whole catalog without booking a studio again.",
 		metrics: [
-			{ value: "Minutes", label: "From upload to studio-grade shots" },
-			{ value: "0", label: "Studios, crews or reshoots needed" },
+			{ display: "Minutes", label: "From upload to studio-grade shots" },
+			{ display: "0", label: "Studios, crews or reshoots needed" },
 		],
+		lead: "image",
+		trace: {
+			status: "verified",
+			note: "Live product at lookatlas.com.",
+		},
 		link: { href: "https://lookatlas.com", label: "lookatlas.com" },
 		image: "workLookatlas",
-		orientation: "landscape",
 	},
 	{
 		index: "03",
 		slug: "morph-ai",
 		title: "Morph AI",
+		category: "Mobile AI app",
 		tagline: "Every model, one subscription",
 		role: "Project Lead Developer",
 		year: "2026",
@@ -89,16 +126,29 @@ export const projects: Project[] = [
 		outcome:
 			"Live on the Google Play Store with subscription and ad revenue running. The app crossed a thousand downloads, and image operations hold under 1.5 seconds even in heavy usage scenarios.",
 		metrics: [
-			{ value: "1k+", label: "Play Store downloads" },
-			{ value: "<1.5s", label: "Image ops under heavy load" },
+			{
+				display: "1k+",
+				label: "Play Store downloads",
+				counter: { from: 0, to: 1000, suffix: "+", compact: true },
+			},
+			{
+				display: "<1.5s",
+				label: "Image ops under heavy load",
+				counter: { from: 4, to: 1.5, prefix: "<", suffix: "s", decimals: 1 },
+			},
 		],
+		lead: "device",
+		trace: {
+			status: "verified",
+			note: "Public listing on Google Play with download count.",
+		},
 		image: "workMorphai",
-		orientation: "portrait",
 	},
 	{
 		index: "04",
 		slug: "fitdyz-ai",
 		title: "Fitdyz AI",
+		category: "Mobile AI app",
 		tagline: "AI workouts, diets and a coach that knows your plan",
 		role: "Project Lead",
 		year: "2026",
@@ -118,13 +168,18 @@ export const projects: Project[] = [
 		outcome:
 			"A clear plan, steady motivation, and fitness that is easier to stick with. Under the hood it runs like a production system: relational PostgreSQL schema with Prisma, role-aware APIs, async queues and realtime chat.",
 		metrics: [],
+		lead: "device",
+		trace: {
+			status: "self-reported",
+			note: "Architecture as built. No public artifact yet.",
+		},
 		image: "workFitdyz",
-		orientation: "portrait",
 	},
 	{
 		index: "05",
 		slug: "hiredswift",
 		title: "HiredSwift",
+		category: "Web platform",
 		tagline: "Human powered job applications",
 		role: "Fullstack Lead Developer",
 		year: "2026",
@@ -136,9 +191,19 @@ export const projects: Project[] = [
 			"Users buy an application package and upload their documents. A real team then applies on their behalf with personalized, human-written materials tailored to each role, not auto-generated spam. I led the build end to end on Next.js, with Firebase powering the dashboards and Stripe handling packages.",
 		outcome:
 			"Applicants reclaim hours every week and move through hiring with far less pressure, spending their energy on interview prep instead of forms.",
-		metrics: [{ value: "30+ min", label: "Reclaimed per application" }],
+		metrics: [
+			{
+				display: "30+ min",
+				label: "Reclaimed per application",
+				counter: { from: 0, to: 30, suffix: "+ min" },
+			},
+		],
+		lead: "metric",
+		trace: {
+			status: "self-reported",
+			note: "Estimate of manual time per application. Product live at hiredswift.com.",
+		},
 		link: { href: "https://hiredswift.com", label: "hiredswift.com" },
 		image: "workHiredswift",
-		orientation: "landscape",
 	},
 ];

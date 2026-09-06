@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/content";
+import { projects, site } from "@/content";
 import { loadAllBlogs } from "@/lib/blogs";
 
 export const dynamic = "force-static";
@@ -16,6 +16,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		images: blog.coverImage ? [`${site.url}${blog.coverImage}`] : undefined,
 	}));
 
+	const workEntries: MetadataRoute.Sitemap = projects.map((project) => ({
+		url: `${site.url}/work/${project.slug}/`,
+		lastModified: latest,
+		changeFrequency: "monthly",
+		priority: 0.8,
+	}));
+
 	return [
 		{
 			url: `${site.url}/`,
@@ -29,6 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			changeFrequency: "weekly",
 			priority: 0.8,
 		},
+		...workEntries,
 		...blogEntries,
 	];
 }

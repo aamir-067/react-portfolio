@@ -1,6 +1,4 @@
-export { default as Hero } from "./Hero";
+export { default as Statement } from "./Statement";
+export { default as Works } from "./Works";
 export { default as About } from "./About";
-export { default as Work } from "./Work";
-export { default as Capabilities } from "./Capabilities";
-export { default as Experience } from "./Experience";
-export { default as Writing, type WritingPost } from "./Writing";
+export { default as Ledger, type LedgerPost } from "./Ledger";

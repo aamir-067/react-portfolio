@@ -118,7 +118,7 @@ export default async function BlogDetailPage({
 	};
 
 	return (
-		<article className="px-5 pb-28 pt-36 md:px-10 md:pt-44">
+		<article className="gutter pb-28 pt-28 md:pt-36">
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
@@ -132,17 +132,17 @@ export default async function BlogDetailPage({
 			<div className="mx-auto max-w-3xl">
 				<TransitionLink
 					href="/blogs"
-					className="mono-label inline-flex items-center gap-2 text-fg/60 transition-colors hover:text-accent"
+					className="hairline mono inline-flex items-center gap-2 text-fg/60"
 				>
 					<ArrowLeft size={13} strokeWidth={1.5} aria-hidden />
 					All writing
 				</TransitionLink>
 
-				<h1 className="mt-8 font-serif text-[clamp(2.4rem,6vw,4.8rem)] leading-[1.02]">
+				<h1 className="mt-8 font-sans text-[clamp(2.4rem,6vw,4.8rem)] font-bold leading-[1.0] tracking-[-0.035em]">
 					{blog.title}
 				</h1>
 
-				<p className="mono-label mt-6 flex flex-wrap gap-x-6 gap-y-2 text-fg/60">
+				<p className="mono mt-6 flex flex-wrap gap-x-6 gap-y-2 text-fg/60">
 					<span>{blog.author}</span>
 					{dateLabel && <time dateTime={blog.date}>{dateLabel}</time>}
 					<span>{readingTime}</span>
@@ -163,7 +163,7 @@ export default async function BlogDetailPage({
 					</div>
 				)}
 
-				<div className="prose prose-paper prose-lg mt-12">
+				<div className="prose prose-site prose-lg mt-12">
 					<ReactMarkdown
 						remarkPlugins={[remarkGfm]}
 						rehypePlugins={[rehypeRaw, rehypeHighlight]}

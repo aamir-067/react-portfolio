@@ -1,29 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import {
-	IBM_Plex_Mono,
-	Instrument_Sans,
-	Instrument_Serif,
-} from "next/font/google";
+import { IBM_Plex_Mono, Manrope } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/chrome/Header";
-import Footer from "@/components/chrome/Footer";
 import Cursor from "@/components/chrome/Cursor";
+import Hud from "@/components/chrome/Hud";
+import Footer from "@/components/chrome/Footer";
 import Grain from "@/components/chrome/Grain";
+import GridLines from "@/components/chrome/GridLines";
 import Preloader from "@/components/chrome/Preloader";
 import ScrollFX from "@/components/chrome/ScrollFX";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import TransitionProvider from "@/components/providers/TransitionProvider";
 import { site } from "@/content";
+import { themeBootScript } from "@/lib/theme";
 
-const serif = Instrument_Serif({
-	weight: "400",
-	style: ["normal", "italic"],
-	subsets: ["latin"],
-	variable: "--font-serif",
-	display: "swap",
-});
-
-const sans = Instrument_Sans({
+const sans = Manrope({
 	subsets: ["latin"],
 	variable: "--font-sans",
 	display: "swap",
@@ -101,8 +91,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-	themeColor: "#f2efe8",
-	colorScheme: "light",
+	themeColor: [
+		{ media: "(prefers-color-scheme: dark)", color: "#0F1111" },
+		{ media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+	],
 };
 
 const jsonLdPerson = {
@@ -169,11 +161,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang="en"
-			className={`${serif.variable} ${sans.variable} ${mono.variable}`}
-		>
+		<html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
 			<head>
+				<script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
 				<script dangerouslySetInnerHTML={{ __html: bootScript }} />
 				<script
 					type="application/ld+json"
@@ -196,10 +186,11 @@ export default function RootLayout({
 				</a>
 				<SmoothScroll />
 				<TransitionProvider>
-					<Header />
+					<Hud />
 					<main id="main">{children}</main>
 					<Footer />
 				</TransitionProvider>
+				<GridLines />
 				<ScrollFX />
 				<Cursor />
 				<Grain />

@@ -111,9 +111,8 @@ export default function TransitionProvider({
 			<div
 				ref={veilRef}
 				aria-hidden
-				className="fixed inset-0 z-[110] hidden bg-ink"
+				className="fixed inset-0 z-[110] hidden bg-cobalt"
 			>
-				<span className="absolute top-0 left-0 h-[2px] w-full bg-accent" />
 			</div>
 		</TransitionContext.Provider>
 	);

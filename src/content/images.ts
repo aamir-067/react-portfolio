@@ -5,7 +5,8 @@ export interface ImageSlot {
 	height: number;
 }
 
-// Swap any placeholder by editing the src line. See IMAGES.md for the manifest.
+// Single source of truth for every image slot. The layout frames use these
+// exact ratios, so export your files at these pixel sizes. See IMAGES.md.
 export const images = {
 	aboutPortrait: {
 		src: "/profile.webp",
@@ -17,25 +18,25 @@ export const images = {
 		src: "/portfolio/cleartraced.webp",
 		alt: "Cleartraced dashboard showing confidence-scored ESG datapoints traced to their source documents",
 		width: 1600,
-		height: 1000,
+		height: 1200,
 	},
 	workLookatlas: {
 		src: "/portfolio/lookatlas.webp",
 		alt: "LookAtlas studio interface generating studio-quality product photos from an uploaded image",
-		width: 1600,
-		height: 1000,
+		width: 1200,
+		height: 1500,
 	},
 	workMorphai: {
 		src: "/portfolio/morphAi.webp",
 		alt: "Morph AI mobile app routing a user request to the best suited model",
-		width: 900,
-		height: 1800,
+		width: 1200,
+		height: 1500,
 	},
 	workFitdyz: {
 		src: "/portfolio/fitdyz.webp",
 		alt: "Fitdyz AI mobile app showing a personalized workout plan and the FitBot assistant",
-		width: 900,
-		height: 1800,
+		width: 1200,
+		height: 1500,
 	},
 	workHiredswift: {
 		src: "/portfolio/hiredswift.webp",
