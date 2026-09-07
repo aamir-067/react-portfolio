@@ -57,7 +57,7 @@ export default function Hero() {
 			className="relative flex min-h-[100svh] flex-col overflow-hidden text-[rgb(var(--hero-fg))]"
 		>
 			<div ref={sceneHostRef} aria-hidden className="hero-fallback absolute inset-0 z-0">
-				{scene && <HeroScene active={active} word={word} />}
+				{scene && <HeroScene active={active} word={word} eventSource={rootRef} />}
 			</div>
 			<Stickers />
 

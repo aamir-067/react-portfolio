@@ -362,7 +362,13 @@ function Word({ theme, word, burst }: { theme: Theme; word: string; burst: numbe
 	);
 }
 
-export default function HeroScene({ active, word }: { active: boolean; word: string }) {
+interface HeroSceneProps {
+	active: boolean;
+	word: string;
+	eventSource: React.RefObject<HTMLElement | null>;
+}
+
+export default function HeroScene({ active, word, eventSource }: HeroSceneProps) {
 	const [theme, setTheme] = useState<Theme>("dark");
 	const [burst, setBurst] = useState(0);
 	useEffect(() => {
@@ -377,6 +383,8 @@ export default function HeroScene({ active, word }: { active: boolean; word: str
 			camera={{ position: [0, 0, 10], fov: 30 }}
 			gl={{ antialias: true, alpha: false }}
 			className="!absolute !inset-0"
+			eventSource={eventSource as React.RefObject<HTMLElement>}
+			eventPrefix="client"
 			onPointerDown={() => setBurst((b) => b + 1)}
 		>
 			<Environment />
